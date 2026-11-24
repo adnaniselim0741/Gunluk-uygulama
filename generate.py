@@ -1,9 +1,37 @@
 import os
 import json
+import time
 import datetime
 from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
+# Öncelik sırasına göre denenecek API model kodları (4 Hydrogen dahil)
+MODELS = [
+    "gemini-4-flash",
+    "gemini-4.0-flash",
+    "gemini-3.8-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-3.8-pro"
+]
+
+def ask_gemini(prompt):
+    for model_name in MODELS:
+        for attempt in range(2):
+            try:
+                print(f"Model deneniyor: {model_name} (Deneme {attempt + 1})")
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt
+                )
+                return response.text.replace("```json", "").replace("```", "").strip()
+            except Exception as e:
+                print(f"{model_name} hata verdi: {e}")
+                # 404 (model adı yok) hatasıysa beklemeden hemen bir sonraki modele geç
+                if "404" in str(e) or "NOT_FOUND" in str(e):
+                    break
+                time.sleep(10)
+    raise RuntimeError("Hicbir modelden yanit alinamadi.")
 
 with open("data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -26,10 +54,7 @@ Daha önce öğrenilenler: {', '.join(data['english']['learned_words'][-50:])}
 }}
 """
 
-res_eng = client.models.generate_content(model="gemini-3.8-flash", contents=eng_prompt)
-clean_eng = res_eng.text.replace("```json", "").replace("```", "").strip()
-eng_entry = json.loads(clean_eng)
-
+eng_entry = json.loads(ask_gemini(eng_prompt))
 data["english"]["day_count"] += 1
 for item in eng_entry["academic"] + eng_entry["technical"]:
     data["english"]["learned_words"].append(item["word"])
@@ -44,9 +69,7 @@ Bugünün tarihi: {today_str}. Türk tarihi ve dünya tarihi açısından bugün
   "events": [{{"year": "...", "title": "...", "detail": "..."}}]
 }}
 """
-res_hist = client.models.generate_content(model="gemini-3.8-flash", contents=history_prompt)
-clean_hist = res_hist.text.replace("```json", "").replace("```", "").strip()
-data["tarihte_bugun"].insert(0, json.loads(clean_hist))
+data["tarihte_bugun"].insert(0, json.loads(ask_gemini(history_prompt)))
 
 # 3. İMET (Günlük Akış)
 imet_prompt = f"""
@@ -58,9 +81,7 @@ Bugünün tarihi: {today_str}. İMet modülü için bugünün teknik/analitik ve
   "content": "..."
 }}
 """
-res_imet = client.models.generate_content(model="gemini-3.8-flash", contents=imet_prompt)
-clean_imet = res_imet.text.replace("```json", "").replace("```", "").strip()
-data["imet"].insert(0, json.loads(clean_imet))
+data["imet"].insert(0, json.loads(ask_gemini(imet_prompt)))
 
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
