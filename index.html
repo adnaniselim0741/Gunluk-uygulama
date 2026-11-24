@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kişisel Çalışma Asistanım</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen">
+  <div class="max-w-3xl mx-auto p-4">
+    <header class="mb-6 border-b border-slate-700 pb-4">
+      <h1 class="text-2xl font-bold text-amber-400">Günlük Çalışma & Bilgi Merkezi</h1>
+      <p class="text-sm text-slate-400">Her gün 08:00'de otomatik güncellenir</p>
+    </header>
+
+    <!-- Modül Sekmeleri (İleride buraya yeni buton ekleyerek modül çoğaltabilirsin) -->
+    <nav class="flex gap-2 mb-6 overflow-x-auto pb-2">
+      <button onclick="showTab('english')" id="btn-english" class="tab-btn bg-amber-500 text-slate-900 font-semibold px-4 py-2 rounded-lg">İngilizce (B1-C2)</button>
+      <button onclick="showTab('tarihte_bugun')" id="btn-tarihte_bugun" class="tab-btn bg-slate-800 text-slate-300 px-4 py-2 rounded-lg">Tarihte Bugün</button>
+      <button onclick="showTab('imet')" id="btn-imet" class="tab-btn bg-slate-800 text-slate-300 px-4 py-2 rounded-lg">İMet</button>
+    </nav>
+
+    <!-- İçerik Alanları -->
+    <main id="content-area" class="space-y-6"></main>
+  </div>
+
+  <script>
+    let appData = {};
+
+    async function loadData() {
+      const res = await fetch('data.json?t=' + new Date().getTime());
+      appData = await res.json();
+      showTab('english');
+    }
+
+    function speak(text) {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US';
+      speechSynthesis.speak(u);
+    }
+
+    function showTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('bg-amber-500', 'text-slate-900', 'font-semibold');
+        b.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      document.getElementById('btn-' + tab).classList.add('bg-amber-500', 'text-slate-900', 'font-semibold');
+
+      const area = document.getElementById('content-area');
+      area.innerHTML = '';
+
+      if (tab === 'english') {
+        const entries = appData.english?.daily_entries || [];
+        if (!entries.length) {
+          area.innerHTML = '<p class="text-slate-400">Henüz günlük veri üretilmedi. GitHub Actions sekmesinden ilk çalıştırmayı tetikleyin.</p>';
+          return;
+        }
+        const today = entries[0];
+        area.innerHTML = `
+          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+            <h2 class="text-xl font-bold text-amber-400 mb-3">Gün ${today.day} (${today.date})</h2>
+            <h3 class="font-semibold text-sky-400 mb-2">Akademik Kelimeler (Ses için tıkla 🔊)</h3>
+            <ul class="space-y-2 mb-4">
+              ${today.academic.map(w => `<li onclick="speak('${w.word}')" class="cursor-pointer hover:bg-slate-700 p-2 rounded"><b>${w.word}</b> (${w.pronunciation}) - ${w.meaning}</li>`).join('')}
+            </ul>
+            <h3 class="font-semibold text-emerald-400 mb-2">Teknik Terimler</h3>
+            <ul class="space-y-2 mb-4">
+              ${today.technical.map(w => `<li onclick="speak('${w.word}')" class="cursor-pointer hover:bg-slate-700 p-2 rounded"><b>${w.word}</b> (${w.pronunciation}) - ${w.meaning}</li>`).join('')}
+            </ul>
+            <h3 class="font-semibold text-purple-400 mb-2">Örnek Cümleler</h3>
+            <ul class="list-disc pl-5 space-y-1 text-slate-300 mb-4">
+              ${today.examples.map(e => `<li>${e}</li>`).join('')}
+            </ul>
+            <div class="bg-slate-900 p-4 rounded-lg mb-4">
+              <h3 class="font-semibold text-amber-300 mb-1">Okuma Metni</h3>
+              <p class="leading-relaxed text-slate-200">${today.reading_text}</p>
+            </div>
+            <blockquote class="border-l-4 border-amber-500 pl-3 italic text-slate-400">
+              "${today.quote.text}" — ${today.quote.author}
+            </blockquote>
+          </div>
+        `;
+      } else if (tab === 'tarihte_bugun') {
+        const list = appData.tarihte_bugun || [];
+        if (!list.length) { area.innerHTML = '<p class="text-slate-400">Veri bekleniyor...</p>'; return; }
+        area.innerHTML = list[0].events.map(ev => `
+          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+            <span class="text-xs font-bold bg-amber-500 text-slate-900 px-2 py-1 rounded">${ev.year}</span>
+            <h3 class="text-lg font-bold mt-2">${ev.title}</h3>
+            <p class="text-slate-300 mt-1">${ev.detail}</p>
+          </div>
+        `).join('');
+      } else if (tab === 'imet') {
+        const list = appData.imet || [];
+        if (!list.length) { area.innerHTML = '<p class="text-slate-400">Veri bekleniyor...</p>'; return; }
+        area.innerHTML = `
+          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+            <h3 class="text-lg font-bold text-amber-400">${list[0].title} (${list[0].date})</h3>
+            <p class="text-slate-200 mt-2 leading-relaxed">${list[0].content}</p>
+          </div>
+        `;
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
