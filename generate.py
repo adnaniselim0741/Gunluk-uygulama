@@ -9,7 +9,6 @@ with open("data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 today_str = datetime.date.today().strftime("%Y-%m-%d")
-is_sunday = datetime.date.today().weekday() == 6
 
 # 1. İNGİLİZCE AKADEMİK & TEKNİK KELİMELER
 eng_prompt = f"""
@@ -27,7 +26,7 @@ Daha önce öğrenilenler: {', '.join(data['english']['learned_words'][-50:])}
 }}
 """
 
-res_eng = client.models.generate_content(model="gemini-2.5-flash", contents=eng_prompt)
+res_eng = client.models.generate_content(model="gemini-3.8-flash", contents=eng_prompt)
 clean_eng = res_eng.text.replace("```json", "").replace("```", "").strip()
 eng_entry = json.loads(clean_eng)
 
@@ -45,7 +44,7 @@ Bugünün tarihi: {today_str}. Türk tarihi ve dünya tarihi açısından bugün
   "events": [{{"year": "...", "title": "...", "detail": "..."}}]
 }}
 """
-res_hist = client.models.generate_content(model="gemini-2.5-flash", contents=history_prompt)
+res_hist = client.models.generate_content(model="gemini-3.8-flash", contents=history_prompt)
 clean_hist = res_hist.text.replace("```json", "").replace("```", "").strip()
 data["tarihte_bugun"].insert(0, json.loads(clean_hist))
 
@@ -59,7 +58,7 @@ Bugünün tarihi: {today_str}. İMet modülü için bugünün teknik/analitik ve
   "content": "..."
 }}
 """
-res_imet = client.models.generate_content(model="gemini-2.5-flash", contents=imet_prompt)
+res_imet = client.models.generate_content(model="gemini-3.8-flash", contents=imet_prompt)
 clean_imet = res_imet.text.replace("```json", "").replace("```", "").strip()
 data["imet"].insert(0, json.loads(clean_imet))
 
