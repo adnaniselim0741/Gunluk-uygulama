@@ -1,0 +1,37 @@
+name: Gunluk Icerik Guncelleme
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # Her gün Türkiye saati ile 08:00 (UTC 05:00)
+  workflow_dispatch:    # İstediğin zaman manuel tetikleyebilmen için buton ekler
+
+permissions:
+  contents: write
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu indir
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Kutuphaneleri yukle
+        run: pip install google-genai
+
+      - name: Icerikleri uret
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate.py
+
+      - name: Degisiklikleri kaydet
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data.json
+          git commit -m "Gunluk icerik guncellendi" || exit 0
+          git push
