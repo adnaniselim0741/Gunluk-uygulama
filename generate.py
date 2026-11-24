@@ -6,18 +6,24 @@ from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-# Öncelik sırasına göre denenecek API model kodları (4 Hydrogen dahil)
-MODELS = [
-    "gemini-4-flash",
-    "gemini-4.0-flash",
-    "gemini-3.8-flash-lite",
-    "gemini-3.8-flash",
-    "gemini-3.8-pro"
-]
+# Hesabında açık olan geçerli metin üretim modellerini otomatik bul
+available_models = ["gemini-3.8-flash"]
+try:
+    for m in client.models.list():
+        name = m.name.replace("models/", "")
+        if "gemini" in name and "embedding" not in name and "imagen" not in name and "veo" not in name:
+            if name not in available_models:
+                available_models.append(name)
+except Exception as e:
+    print("Model listesi alinamadi:", e)
+
+print("Kullanilabilir modeller:", available_models)
 
 def ask_gemini(prompt):
-    for model_name in MODELS:
-        for attempt in range(2):
+    # Önce birincil modeli (gemini-3.8-flash) yoğunluğa karşı 4 kez dene, olmazsa diğer aktif modellere geç
+    for model_name in available_models:
+        retries = 4 if model_name == "gemini-3.8-flash" else 2
+        for attempt in range(retries):
             try:
                 print(f"Model deneniyor: {model_name} (Deneme {attempt + 1})")
                 response = client.models.generate_content(
@@ -27,10 +33,9 @@ def ask_gemini(prompt):
                 return response.text.replace("```json", "").replace("```", "").strip()
             except Exception as e:
                 print(f"{model_name} hata verdi: {e}")
-                # 404 (model adı yok) hatasıysa beklemeden hemen bir sonraki modele geç
-                if "404" in str(e) or "NOT_FOUND" in str(e):
+                if "404" in str(e) or "NOT_FOUND" in str(e) or "429" in str(e):
                     break
-                time.sleep(10)
+                time.sleep(15)
     raise RuntimeError("Hicbir modelden yanit alinamadi.")
 
 with open("data.json", "r", encoding="utf-8") as f:
