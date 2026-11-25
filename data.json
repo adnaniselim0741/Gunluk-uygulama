@@ -1,11 +1,146 @@
 {
   "english": {
     "current_level": "B1",
-    "day_count": 20,
-    "learned_words": ["achieve", "benefit", "challenge", "design", "evidence", "factor", "identify", "issue", "process", "research"],
-    "daily_entries": [],
+    "day_count": 21,
+    "learned_words": [
+      "achieve",
+      "benefit",
+      "challenge",
+      "design",
+      "evidence",
+      "factor",
+      "identify",
+      "issue",
+      "process",
+      "research",
+      "subsequent",
+      "constraint",
+      "fundamental",
+      "comprehensive",
+      "implement",
+      "generate",
+      "evaluate",
+      "diminish",
+      "hypothesis",
+      "significant",
+      "transducer",
+      "hysteresis",
+      "actuator"
+    ],
+    "daily_entries": [
+      {
+        "day": 21,
+        "date": "2026-11-25",
+        "academic": [
+          {
+            "word": "subsequent",
+            "pronunciation": "ˈsʌbsɪkwənt",
+            "meaning": "Daha sonra gelen, müteakip"
+          },
+          {
+            "word": "constraint",
+            "pronunciation": "kənˈstreɪnt",
+            "meaning": "Kısıtlama, zorunluluk"
+          },
+          {
+            "word": "fundamental",
+            "pronunciation": "ˌfʌndəˈmentl",
+            "meaning": "Temel, esaslı"
+          },
+          {
+            "word": "comprehensive",
+            "pronunciation": "ˌkɒmprɪˈhensɪv",
+            "meaning": "Kapsamlı, etraflı"
+          },
+          {
+            "word": "implement",
+            "pronunciation": "ˈɪmplɪment",
+            "meaning": "Uygulamaya koymak, gerçekleştirmek"
+          },
+          {
+            "word": "generate",
+            "pronunciation": "ˈdʒenəreɪt",
+            "meaning": "Üretmek, oluşturmak"
+          },
+          {
+            "word": "evaluate",
+            "pronunciation": "ɪˈvæljueɪt",
+            "meaning": "Değerlendirmek"
+          },
+          {
+            "word": "diminish",
+            "pronunciation": "dɪˈmɪnɪʃ",
+            "meaning": "Azalmak, küçülmek"
+          },
+          {
+            "word": "hypothesis",
+            "pronunciation": "haɪˈpɒθɪsɪs",
+            "meaning": "Varsayım, hipotez"
+          },
+          {
+            "word": "significant",
+            "pronunciation": "sɪɡˈnɪfɪkənt",
+            "meaning": "Önemli, kayda değer"
+          }
+        ],
+        "technical": [
+          {
+            "word": "transducer",
+            "pronunciation": "trænzˈdjuːsər",
+            "meaning": "Bir enerji türünü diğerine dönüştüren cihaz"
+          },
+          {
+            "word": "hysteresis",
+            "pronunciation": "ˌhɪstəˈriːsɪs",
+            "meaning": "Bir sistemin çıkışının girişteki değişime göre gecikmeli tepki vermesi"
+          },
+          {
+            "word": "actuator",
+            "pronunciation": "ˈæktʃueɪtər",
+            "meaning": "Bir mekanizmayı veya sistemi hareket ettiren kontrol bileşeni"
+          }
+        ],
+        "examples": [
+          "The subsequent testing phase proved that the initial hypothesis was correct.",
+          "Budget constraints often limit the implementation of complex control systems.",
+          "A transducer is fundamental to translating physical parameters into electrical signals."
+        ],
+        "reading_text": "In modern automation, the comprehensive evaluation of system performance is vital. Engineers must identify every constraint before they implement a new control strategy. By utilizing a high-precision actuator, the system can diminish errors caused by hysteresis, ensuring that subsequent processes operate within significant efficiency margins.",
+        "quote": {
+          "text": "Engineering is the art of modeling materials we do not wholly understand, into shapes we cannot precisely analyze so as to withstand forces we cannot properly assess.",
+          "author": "Dr. A.R. Dykes"
+        }
+      }
+    ],
     "weekly_tests": []
   },
-  "tarihte_bugun": [],
-  "imet": []
+  "tarihte_bugun": [
+    {
+      "date": "2026-11-25",
+      "events": [
+        {
+          "year": "1925",
+          "title": "Şapka İktisası Hakkındaki Kanun'un Yürürlüğe Girmesi",
+          "detail": "644 sayılı Şapka İktisası Hakkındaki Kanun, 25 Kasım 1925 tarihinde Resmî Gazete'de yayımlanarak yürürlüğe girmiştir. Türk modernleşme reformlarının en önemli sembollerinden biri olan bu kanun, kıyafet devriminin temel taşını oluşturarak kamu alanında geleneksel başlıkların yerine modern şapkayı zorunlu kılmıştır."
+        },
+        {
+          "year": "1960",
+          "title": "Mirabal Kardeşlerin Katledilmesi ve Kadına Yönelik Şiddetle Mücadele Günü",
+          "detail": "Dominik Cumhuriyeti'nde diktatör Trujillo rejimine karşı mücadele eden üç Mirabal kız kardeş, 25 Kasım 1960 tarihinde devlet görevlileri tarafından vahşice öldürülmüştür. Bu olay, 1999 yılında Birleşmiş Milletler tarafından 'Kadına Yönelik Şiddetin Ortadan Kaldırılması İçin Uluslararası Mücadele Günü' olarak kabul edilmiştir."
+        },
+        {
+          "year": "1975",
+          "title": "Surinam'ın Hollanda'dan Bağımsızlığını Kazanması",
+          "detail": "Güney Amerika ülkesi Surinam, 25 Kasım 1975 tarihinde Hollanda sömürge yönetimi altındaki üç asırlık statüsüne son vererek tam bağımsızlığını ilan etmiştir. Hollanda ile yürütülen müzakereler sonucu ülke, kendi egemenliğini tesis ederek bağımsız bir cumhuriyet olarak uluslararası toplumda yerini almıştır."
+        }
+      ]
+    }
+  ],
+  "imet": [
+    {
+      "date": "2026-11-25",
+      "title": "Günlük İMet Özeti",
+      "content": "2026 yılının son çeyreği itibarıyla İMet modülü, küresel piyasalardaki volatiliteyi minimize etmeye yönelik optimize edilmiş algoritma güncellemelerini başarıyla tamamlamıştır. Bugün yapılan analizler, merkez bankalarının dijital para birimleri (CBDC) üzerindeki regülasyon baskısının veri işleme hızlarını %4 oranında etkilediğini, ancak yapay zeka tabanlı öngörü modellerinin %92 doğruluk payı ile stabil seyrettiğini göstermektedir. Sistem, mevcut piyasa likidite göstergelerini izleyerek yüksek frekanslı ticaret süreçleri için risk eşiklerini yeniden tanımlamıştır."
+    }
+  ]
 }
