@@ -1,7 +1,7 @@
 {
   "english": {
     "current_level": "B1",
-    "day_count": 21,
+    "day_count": 22,
     "learned_words": [
       "achieve",
       "benefit",
@@ -25,9 +25,115 @@
       "significant",
       "transducer",
       "hysteresis",
-      "actuator"
+      "actuator",
+      "analyze",
+      "concept",
+      "indicate",
+      "occur",
+      "perspective",
+      "primary",
+      "require",
+      "section",
+      "theory",
+      "vary",
+      "feedback",
+      "attenuation",
+      "microgrid"
     ],
     "daily_entries": [
+      {
+        "day": 22,
+        "date": "2026-11-26",
+        "academic": [
+          {
+            "word": "analyze",
+            "pronunciation": "/ˈæn.əl.aɪz/",
+            "meaning": "analiz etmek, ayrıntılı incelemek"
+          },
+          {
+            "word": "concept",
+            "pronunciation": "/ˈkɒn.sept/",
+            "meaning": "kavram, genel fikir"
+          },
+          {
+            "word": "indicate",
+            "pronunciation": "/ˈɪn.dɪ.keɪt/",
+            "meaning": "göstermek, işaret etmek"
+          },
+          {
+            "word": "occur",
+            "pronunciation": "/əˈkɜːr/",
+            "meaning": "meydana gelmek, gerçekleşmek"
+          },
+          {
+            "word": "perspective",
+            "pronunciation": "/pəˈspek.tɪv/",
+            "meaning": "bakış açısı, perspektif"
+          },
+          {
+            "word": "primary",
+            "pronunciation": "/ˈpraɪ.mər.i/",
+            "meaning": "başlıca, esas, birincil"
+          },
+          {
+            "word": "require",
+            "pronunciation": "/rɪˈkwaɪər/",
+            "meaning": "gerektirmek, ihtiyaç duymak"
+          },
+          {
+            "word": "section",
+            "pronunciation": "/ˈsek.ʃən/",
+            "meaning": "bölüm, kısım"
+          },
+          {
+            "word": "theory",
+            "pronunciation": "/ˈθɪə.ri/",
+            "meaning": "teori, kuram"
+          },
+          {
+            "word": "vary",
+            "pronunciation": "/ˈveə.ri/",
+            "meaning": "çeşitlilik göstermek, değişmek"
+          }
+        ],
+        "technical": [
+          {
+            "word": "feedback",
+            "pronunciation": "/ˈfiːd.bæk/",
+            "meaning": "geri besleme (bir sistemin çıktısının bir kısmının kontrol amacıyla girişe geri verilmesi)"
+          },
+          {
+            "word": "attenuation",
+            "pronunciation": "/əˌten.juˈeɪ.ʃən/",
+            "meaning": "zayıflama (bir sinyalin iletim hattı boyunca genliğinin ve gücünün azalması)"
+          },
+          {
+            "word": "microgrid",
+            "pronunciation": "/ˈmaɪ.krəʊ.ɡrɪd/",
+            "meaning": "mikro şebeke (bağımsız veya ana şebekeye bağlı çalışabilen yerel enerji dağıtım ağı)"
+          }
+        ],
+        "examples": [
+          "Engineers must analyze the system response before deploying the software.",
+          "The concept of negative feedback is central to modern control theory.",
+          "Test results indicate that the voltage levels remain stable under heavy load.",
+          "Voltage fluctuations often occur during peak industrial hours.",
+          "From an engineering perspective, efficiency is as critical as reliability.",
+          "The primary objective of the new algorithm is to minimize power loss.",
+          "High-frequency circuits require specialized shielding to avoid noise.",
+          "The power distribution section contains the main circuit breakers.",
+          "Control theory provides mathematical tools to model complex dynamic systems.",
+          "Output values may vary depending on ambient temperature changes.",
+          "A negative feedback loop helps correct errors and maintain reference speed.",
+          "Cable attenuation causes high-frequency signal degradation over long distances.",
+          "The islanded microgrid relies on renewable energy and battery storage."
+        ],
+        "reading_text": "Modern power systems require advanced control strategies to integrate renewable energy into the grid. When engineers analyze the concept of a microgrid, their primary perspective is focused on stability and reliability. Signal attenuation across long communication lines may cause transmission delays that negatively influence the control loops. If unexpected voltage variations occur, an automated feedback mechanism must instantly adjust the power output. Control theory dictates that each section of the distributed network must respond dynamically, even when renewable generation levels vary throughout the day.",
+        "quote": {
+          "text": "To live effectively is to live with adequate information.",
+          "author": "Norbert Wiener"
+        }
+      },
       {
         "day": 21,
         "date": "2026-11-25",
@@ -116,6 +222,26 @@
   },
   "tarihte_bugun": [
     {
+      "date": "2026-11-26",
+      "events": [
+        {
+          "year": "1812",
+          "title": "Berezina Muharebesi'nin Başlaması",
+          "detail": "Napolyon Savaşları kapsamında, Rusya Seferi'nden geri çekilen Napoléon Bonaparte komutasındaki Büyük Ordu (Grande Armée) ile Rus İmparatorluk ordusu arasında Berezina Nehri civarında muharebe başlamıştır. Fransız birliklerinin ağır kayıplarla nehri geçmeyi başardığı bu stratejik çatışma, Napoléon'un Rusya harekâtının nihai başarısızlığını tescilleyen kritik bir dönüm noktasıdır."
+        },
+        {
+          "year": "1922",
+          "title": "Tutankhamun'un Mezarının Açılması",
+          "detail": "İngiliz arkeolog Howard Carter ve sponsoru Lord Carnarvon, Mısır'daki Krallar Vadisi'nde yer alan 18. Hanedan firavunu Tutankhamun'a ait mezara (KV62) 3000 yılı aşkın süre sonra ilk kez giriş yapmıştır. Mezardan çıkarılan bozulmamış eserler, Antik Mısır sanatı, cenaze ritüelleri ve arkeoloji tarihi açısından 20. yüzyılın en önemli keşiflerinden biri olarak kabul edilmektedir."
+        },
+        {
+          "year": "1934",
+          "title": "Lakap ve Unvanların Kaldırılmasına Dair Kanun'un Kabulü",
+          "detail": "Türkiye Büyük Millet Meclisi'nde 2590 sayılı 'Efendi, Bey, Paşa Gibi Lakap ve Unvanların Kaldırılmasına Dair Kanun' kabul edilmiştir. Soyadı Kanunu'nu tamamlayıcı nitelikteki bu hukuki düzenleme; Osmanlı hiyerarşik toplumsal yapısını temsil eden unvanları lağvederek kanun önünde eşit yurttaşlık ilkesini ve sivil eşitliği tesis etmeyi amaçlamıştır."
+        }
+      ]
+    },
+    {
       "date": "2026-11-25",
       "events": [
         {
@@ -137,6 +263,11 @@
     }
   ],
   "imet": [
+    {
+      "date": "2026-11-26",
+      "title": "Günlük İMet Özeti",
+      "content": "2026 yılının son çeyreği itibarıyla İMet modülü, büyük veri işleme kapasitesini optimize ederek tahminleme hassasiyetini %94 seviyesine taşımıştır. Güncel piyasa dinamikleri ve makroekonomik veriler ışığında, algoritmik modelleme süreçlerinde otonom düzeltme mekanizmaları devreye alınmış; operasyonel verimlilikte bir önceki çeyreğe göre %12'lik bir artış gözlemlenmiştir. Stratejik olarak, sistem içi entegrasyonların derinleştirilmesi ve veri akışındaki gecikmelerin minimize edilmesi öncelikli gündem maddesi olmaya devam etmektedir."
+    },
     {
       "date": "2026-11-25",
       "title": "Günlük İMet Özeti",
