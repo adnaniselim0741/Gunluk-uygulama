@@ -1,7 +1,7 @@
 {
   "english": {
     "current_level": "B1",
-    "day_count": 22,
+    "day_count": 23,
     "learned_words": [
       "achieve",
       "benefit",
@@ -38,9 +38,107 @@
       "vary",
       "feedback",
       "attenuation",
-      "microgrid"
+      "microgrid",
+      "approach",
+      "assume",
+      "conduct",
+      "establish",
+      "maintain",
+      "obtain",
+      "potential",
+      "restrict",
+      "shift",
+      "sufficient",
+      "harmonics",
+      "damping",
+      "rectifier"
     ],
     "daily_entries": [
+      {
+        "day": 23,
+        "date": "2026-11-27",
+        "academic": [
+          {
+            "word": "approach",
+            "pronunciation": "/əˈprəʊtʃ/",
+            "meaning": "yaklaşım, bir konuyu ele alış biçimi"
+          },
+          {
+            "word": "assume",
+            "pronunciation": "/əˈsjuːm/",
+            "meaning": "varsaymak, farz etmek"
+          },
+          {
+            "word": "conduct",
+            "pronunciation": "/kənˈdʌkt/",
+            "meaning": "(araştırma, deney vb.) yürütmek, yönetmek"
+          },
+          {
+            "word": "establish",
+            "pronunciation": "/ɪˈstæblɪʃ/",
+            "meaning": "kurmak, sağlam temele oturtmak, saptamak"
+          },
+          {
+            "word": "maintain",
+            "pronunciation": "/meɪnˈteɪn/",
+            "meaning": "sürdürmek, devam ettirmek, bakımını yapmak"
+          },
+          {
+            "word": "obtain",
+            "pronunciation": "/əbˈteɪn/",
+            "meaning": "elde etmek, edinmek"
+          },
+          {
+            "word": "potential",
+            "pronunciation": "/pəˈtenʃl/",
+            "meaning": "potansiyel, olası, gizil güç"
+          },
+          {
+            "word": "restrict",
+            "pronunciation": "/rɪˈstrɪkt/",
+            "meaning": "kısıtlamak, sınırlandırmak"
+          },
+          {
+            "word": "shift",
+            "pronunciation": "/ʃɪft/",
+            "meaning": "değiştirmek, kaydırmak; değişim"
+          },
+          {
+            "word": "sufficient",
+            "pronunciation": "/səˈfɪʃnt/",
+            "meaning": "yeterli, kafi"
+          }
+        ],
+        "technical": [
+          {
+            "word": "harmonics",
+            "pronunciation": "/hɑːˈmɒnɪks/",
+            "meaning": "harmonikler (temel şebeke frekansının tam katları olan istenmeyen elektriksel dalga bileşenleri)"
+          },
+          {
+            "word": "damping",
+            "pronunciation": "/ˈdæmpɪŋ/",
+            "meaning": "sönümleme (sistem salınımlarını ve rezonansı bastırma etkisi)"
+          },
+          {
+            "word": "rectifier",
+            "pronunciation": "/ˈrektɪfaɪə/",
+            "meaning": "doğrultucu (alternatif akımı [AC] doğru akıma [DC] dönüştüren elektronik devre elemanı)"
+          }
+        ],
+        "examples": [
+          "Engineers must establish clear parameters before testing the new circuit.",
+          "A full-wave rectifier is employed to obtain a stable direct current output.",
+          "Without sufficient damping, mechanical systems can experience destructive vibrations.",
+          "Non-linear loads can shift the phase angle and introduce severe harmonics into the grid.",
+          "The team decided to conduct an experiment to evaluate the potential risks of overheating."
+        ],
+        "reading_text": "In modern power systems, engineers often adopt an innovative approach to maintain grid stability. When converting alternating current to direct current, a rectifier is typically required, but this conversion process can introduce undesirable harmonics into the power lines. If these distorted waveforms are not controlled, they restrict overall system efficiency. Control engineers assume ideal conditions during preliminary simulations, but real-world setups demand sufficient damping to suppress voltage fluctuations. By conducting rigorous laboratory trials, researchers can establish safe operational thresholds and shift traditional power architectures toward resilient, high-performance digital grids.",
+        "quote": {
+          "text": "Scientists discover the world that exists; engineers create the world that never was.",
+          "author": "Theodore von Kármán"
+        }
+      },
       {
         "day": 22,
         "date": "2026-11-26",
@@ -222,6 +320,26 @@
   },
   "tarihte_bugun": [
     {
+      "date": "2026-11-27",
+      "events": [
+        {
+          "year": "1095",
+          "title": "I. Haçlı Seferi'nin İlanı",
+          "detail": "Papa II. Urbanus, Clermont Konsili'nde yaptığı konuşmayla, Bizans İmparatoru I. Aleksios'un yardım çağrısına yanıt olarak Kudüs'ün Müslümanlardan geri alınması amacıyla I. Haçlı Seferi'ni resmen ilan etmiştir."
+        },
+        {
+          "year": "1919",
+          "title": "Neuilly Antlaşması'nın İmzalanması",
+          "detail": "I. Dünya Savaşı sonunda İtilaf Devletleri ile Bulgaristan arasında imzalanan bu antlaşma, Bulgaristan'ın toprak kaybetmesine ve ağır askeri kısıtlamalara tabi tutulmasına neden olan bölgesel bir düzenlemedir."
+        },
+        {
+          "year": "1978",
+          "title": "PKK'nın Kuruluşu",
+          "detail": "Abdullah Öcalan ve arkadaşları tarafından Diyarbakır'ın Lice ilçesi Fis köyünde, Marksist-Leninist ideoloji temelinde Türkiye'ye karşı faaliyet yürütecek olan Kürdistan İşçi Partisi (PKK) kurulmuştur."
+        }
+      ]
+    },
+    {
       "date": "2026-11-26",
       "events": [
         {
@@ -263,6 +381,11 @@
     }
   ],
   "imet": [
+    {
+      "date": "2026-11-27",
+      "title": "Günlük İMet Özeti",
+      "content": "27 Kasım 2026 tarihi itibarıyla İMet (İleri Meteorolojik ve Analitik İzleme Modülü) operasyonel veri hattında sistem kararlılığı %99,8 seviyesinde seyretmektedir. Günlük nümerik analiz ve modelleme çıktılarında troposferik dinamik sapmalar belirlenen ±%2 tolerans sınırları içerisinde kalmış, sensör kalibrasyon matrisleri ve istatistiksel hata katsayıları optimize edilmiştir. Kış mevsimi döngüsüne ilişkin veri işleme hacmindeki artışa rağmen boru hattı gecikmesi (latency) ortalama 115 ms seviyesinde tutulmuş; anomali tespit algoritmaları herhangi bir kritik sapma raporlamamıştır. Modül, periyodik veri beslemeleri ve tahmin akışları için tam kapasiteyle çalışmaktadır."
+    },
     {
       "date": "2026-11-26",
       "title": "Günlük İMet Özeti",
