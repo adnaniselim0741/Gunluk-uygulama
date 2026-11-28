@@ -1,7 +1,7 @@
 {
   "english": {
     "current_level": "B1",
-    "day_count": 23,
+    "day_count": 24,
     "learned_words": [
       "achieve",
       "benefit",
@@ -51,9 +51,115 @@
       "sufficient",
       "harmonics",
       "damping",
-      "rectifier"
+      "rectifier",
+      "consistent",
+      "demonstrate",
+      "estimate",
+      "initial",
+      "modify",
+      "precise",
+      "relevant",
+      "specify",
+      "undertake",
+      "valid",
+      "impedance",
+      "servomotor",
+      "bandwidth"
     ],
     "daily_entries": [
+      {
+        "day": 24,
+        "date": "2026-11-28",
+        "academic": [
+          {
+            "word": "consistent",
+            "pronunciation": "/kənˈsɪstənt/",
+            "meaning": "tutarlı, istikrarlı, birbiriyle uyumlu"
+          },
+          {
+            "word": "demonstrate",
+            "pronunciation": "/ˈdemənstreɪt/",
+            "meaning": "göstermek, kanıtlamak, uygulamalı açıklamak"
+          },
+          {
+            "word": "estimate",
+            "pronunciation": "/ˈestɪmeɪt/",
+            "meaning": "tahmin etmek, yaklaşık değer biçmek"
+          },
+          {
+            "word": "initial",
+            "pronunciation": "/ɪˈnɪʃəl/",
+            "meaning": "ilk, baştaki, başlangıç niteliğinde"
+          },
+          {
+            "word": "modify",
+            "pronunciation": "/ˈmɒdɪfaɪ/",
+            "meaning": "değiştirmek, uyarlamak, modifiye etmek"
+          },
+          {
+            "word": "precise",
+            "pronunciation": "/prɪˈsaɪs/",
+            "meaning": "kesin, tam, dakik, hassas"
+          },
+          {
+            "word": "relevant",
+            "pronunciation": "/ˈreləvənt/",
+            "meaning": "ilgili, amaca uygun, konuyla bağlantılı"
+          },
+          {
+            "word": "specify",
+            "pronunciation": "/ˈspesɪfaɪ/",
+            "meaning": "açıkça belirtmek, belirlemek, ayrıntı vermek"
+          },
+          {
+            "word": "undertake",
+            "pronunciation": "/ˌʌndəˈteɪk/",
+            "meaning": "üstlenmek, girişmek, yapmayı kabul etmek"
+          },
+          {
+            "word": "valid",
+            "pronunciation": "/ˈvælɪd/",
+            "meaning": "geçerli, mantıklı, yasal veya bilimsel olarak doğru"
+          }
+        ],
+        "technical": [
+          {
+            "word": "impedance",
+            "pronunciation": "/ɪmˈpiːdəns/",
+            "meaning": "empedans (alternatif akım devrelerinde akışa karşı gösterilen toplam direnç)"
+          },
+          {
+            "word": "servomotor",
+            "pronunciation": "/ˈsɜːvəʊˌməʊtə/",
+            "meaning": "servomotor (hassas konum, hız ve ivme denetimi sağlayan kapalı çevrim motor)"
+          },
+          {
+            "word": "bandwidth",
+            "pronunciation": "/ˈbændwɪdθ/",
+            "meaning": "bant genişliği (bir sinyalin veya sistemin iletebildiği frekans aralığı / veri kapasitesi)"
+          }
+        ],
+        "examples": [
+          "The experimental setup provided consistent measurements throughout the multi-stage evaluation.",
+          "The pilot study serves to demonstrate that the proposed architecture operates reliably under high load.",
+          "Engineers estimate that dynamic load balancing can lower total operational losses by twelve percent.",
+          "The initial configuration parameters resulted in minor oscillation during motor startup.",
+          "Technicians had to modify the analog filter stage to suppress high-frequency line interference.",
+          "Precise calibration of every sensor node is critical for accurate environmental monitoring.",
+          "Researchers gathered all relevant operational logs before beginning the failure analysis.",
+          "Design standards specify the minimum safety margins required for high-voltage substations.",
+          "The consortium agreed to undertake an extensive overhaul of the outdated supervisory control platform.",
+          "The experimental outcome remains valid only when the ambient temperature is strictly regulated.",
+          "Proper matching of source and load impedance prevents undesirable signal reflections along high-speed traces.",
+          "A brushless servomotor was integrated into the robotic arm to provide accurate angular articulation.",
+          "Increasing the closed-loop control bandwidth improved the overall responsiveness of the tracking mechanism."
+        ],
+        "reading_text": "Before engineers undertake the deployment of modern industrial automation systems, they must establish valid testing protocols to demonstrate system reliability. During the initial design review, technical specifications strictly specify operational limits such as operating voltage and maximum load. In high-speed robotic manipulators, each joint relies on an industrial servomotor to guarantee precise trajectory execution. However, unexpected signal degradation can occur if the characteristic impedance of transmission lines is not properly matched, reducing the effective bandwidth of critical communication networks. To address such irregularities, automation specialists estimate system parameters through simulation and modify loop filters accordingly. Maintaining consistent real-time performance depends heavily on analyzing all relevant telemetry data under variable operating conditions.",
+        "quote": {
+          "text": "Scientists investigate that which already is; engineers create that which has never been.",
+          "author": "Theodore von Kármán"
+        }
+      },
       {
         "day": 23,
         "date": "2026-11-27",
@@ -320,6 +426,26 @@
   },
   "tarihte_bugun": [
     {
+      "date": "2026-11-28",
+      "events": [
+        {
+          "year": "1912",
+          "title": "Arnavutluk'un Bağımsızlık Bildirgesi",
+          "detail": "Balkan Savaşları sırasında Vlora'da toplanan Ulusal Meclis, İsmail Kemal Bey önderliğinde Osmanlı İmparatorluğu'ndan bağımsızlığını ilan etmiştir. Bu gelişmeyle birlikte Osmanlı Devleti'nin Balkanlar'daki doğrudan hâkimiyeti fiilen sona ermiş, bölgedeki jeopolitik dengeler köklü bir dönüşüm geçirmiştir."
+        },
+        {
+          "year": "1938",
+          "title": "Mustafa Kemal Atatürk'ün Vasiyetnamesinin Açılması",
+          "detail": "Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün 5 Eylül 1938'de Dolmabahçe Sarayı'nda kaleme aldığı el yazısı vasiyetnamesi, Ankara 3. Sulh Hukuk Mahkemesi tarafından açılarak resmen okunmuştur. Vasiyet gereğince şahsi birikimlerinin neması Türk Tarih Kurumu ve Türk Dil Kurumu'na bırakılmış, kurumsal miras güvence altına alınmıştır."
+        },
+        {
+          "year": "1943",
+          "title": "Tahran Konferansı'nın Başlaması",
+          "detail": "Müttefik Devletler liderleri Franklin D. Roosevelt, Winston Churchill ve Joseph Stalin, II. Dünya Savaşı sürecinde stratejik iş birliğini koordine etmek amacıyla Tahran'da ilk kez bir araya gelmiştir. Konferansta Batı Avrupa'da ikinci bir cephe açılması (Overlord Harekâtı) kesinleştirilmiş ve savaş sonrası küresel siyasi düzenin çerçevesi müzakere edilmiştir."
+        }
+      ]
+    },
+    {
       "date": "2026-11-27",
       "events": [
         {
@@ -381,6 +507,11 @@
     }
   ],
   "imet": [
+    {
+      "date": "2026-11-28",
+      "title": "Günlük İMet Özeti",
+      "content": "28 Kasım 2026 itibarıyla İMet modülü operasyonel metrikleri ve tahmin modelleri incelenmiştir: Veri toplama ve telemetri istasyonları entegrasyonunda %99,8 veri tamlık oranı yakalanmış, yüksek çözünürlüklü nümerik tahmin modelleri (WRF/ECMWF tabanlı) gecikmesiz çalıştırılmıştır. Kış geçiş periyoduna bağlı olarak kuzey ve iç kesimlerde yerel model sapmaları (özellikle sıcaklık ve rüzgâr kırılması katmanlarında) ±0,7°C tolerans bandı içinde kalmıştır. Tespit edilen ani basınç anomalisi sınırlandırılmış mikro ölçekli hücre tahmin algoritmalarıyla başarıyla güncellenmiş; karar destek mekanizmalarına iletilen risk skorlamalarında kritik bir sistem kesintisi raporlanmamıştır."
+    },
     {
       "date": "2026-11-27",
       "title": "Günlük İMet Özeti",
